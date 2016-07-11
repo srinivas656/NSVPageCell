@@ -18,18 +18,15 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
-    _scView.backgroundColor = [UIColor redColor];
+    _scView.backgroundColor = [UIColor clearColor];
     [_scView setScrollEnabled:YES];
     [_scView setPagingEnabled:YES];
     _scView.showsVerticalScrollIndicator=YES;
     _scView.userInteractionEnabled=YES;
     _scView.delegate = self ;
     
-   
-    
     _pageController.transform = CGAffineTransformMakeScale(0.6, 0.4);
     _pageController.numberOfPages = _recipeImages.count ;
-    
     
     int i = 10 ;
     for (id elemnt in _recipeImages) {

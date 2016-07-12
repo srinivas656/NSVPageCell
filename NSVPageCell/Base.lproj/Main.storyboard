@@ -19,12 +19,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Xjy-Ez-XI0">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="160" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Xjy-Ez-XI0">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableCell" rowHeight="120" id="LRS-Pp-JRD" customClass="NSVPageTable_Cell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableCell" rowHeight="160" id="LRS-Pp-JRD" customClass="NSVPageTable_Cell">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LRS-Pp-JRD" id="8MV-R8-Kvj">
@@ -38,14 +38,14 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="37" id="hRX-5V-PVG"/>
                                                     </constraints>
+                                                    <color key="pageIndicatorTintColor" red="0.82745098039999998" green="0.2784313725" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="currentPageIndicatorTintColor" red="0.089010079399999997" green="0.70170985620000004" blue="0.31577829810000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <variation key="default">
                                                         <mask key="constraints">
                                                             <exclude reference="hRX-5V-PVG"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="0.0" y="90" width="240" height="37"/>
+                                                    <variation key="widthClass=compact">
                                                         <mask key="constraints">
                                                             <include reference="hRX-5V-PVG"/>
                                                         </mask>
@@ -54,29 +54,30 @@
                                                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="su1-4o-f8F">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                     <animations/>
-                                                    <variation key="widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="0.0" y="0.0" width="240" height="100"/>
-                                                    </variation>
                                                     <connections>
                                                         <outlet property="delegate" destination="gR5-AS-34F" id="LBE-H1-RDo"/>
                                                     </connections>
                                                 </scrollView>
                                             </subviews>
                                             <animations/>
-                                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="su1-4o-f8F" secondAttribute="bottom" constant="21.5" id="0kq-3E-rkh">
-                                                    <variation key="widthClass=compact" constant="11.5"/>
+                                                    <variation key="widthClass=compact" constant="39.5"/>
                                                 </constraint>
                                                 <constraint firstAttribute="bottomMargin" secondItem="bDD-91-MNy" secondAttribute="bottom" constant="-7.5" id="27X-05-Pws"/>
                                                 <constraint firstItem="su1-4o-f8F" firstAttribute="top" secondItem="8MV-R8-Kvj" secondAttribute="top" id="FGe-4N-ZVX"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="bDD-91-MNy" secondAttribute="bottom" constant="-25.5" id="HZV-2O-ono"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="bDD-91-MNy" secondAttribute="bottom" constant="-25.5" id="TAl-wQ-nlk">
-                                                    <variation key="widthClass=compact" constant="-15.5"/>
+                                                    <variation key="widthClass=compact" constant="-5.5"/>
                                                 </constraint>
-                                                <constraint firstItem="su1-4o-f8F" firstAttribute="trailing" secondItem="bDD-91-MNy" secondAttribute="trailing" id="W8R-vZ-G1c"/>
+                                                <constraint firstItem="su1-4o-f8F" firstAttribute="trailing" secondItem="bDD-91-MNy" secondAttribute="trailing" id="W8R-vZ-G1c">
+                                                    <variation key="widthClass=compact" constant="0.0"/>
+                                                </constraint>
                                                 <constraint firstItem="bDD-91-MNy" firstAttribute="leading" secondItem="8MV-R8-Kvj" secondAttribute="leadingMargin" constant="-8" id="cae-EH-jYE"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="bDD-91-MNy" secondAttribute="trailing" constant="-8" id="sVM-Gz-fEQ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="bDD-91-MNy" secondAttribute="trailing" constant="-8" id="sVM-Gz-fEQ">
+                                                    <variation key="widthClass=compact" constant="-8"/>
+                                                </constraint>
                                                 <constraint firstItem="su1-4o-f8F" firstAttribute="leading" secondItem="bDD-91-MNy" secondAttribute="leading" id="zhz-dz-XW0"/>
                                             </constraints>
                                             <variation key="default">
@@ -161,7 +162,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m7C-Vr-chg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1651.5" y="-809"/>
+            <point key="canvasLocation" x="1465.5" y="-827"/>
         </scene>
     </scenes>
 </document>

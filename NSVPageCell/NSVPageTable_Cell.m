@@ -25,19 +25,25 @@
     _scView.userInteractionEnabled=YES;
     _scView.delegate = self ;
     
-    _pageController.transform = CGAffineTransformMakeScale(0.6, 0.4);
+    //_pageController.transform = CGAffineTransformMakeScale(0.6, 0.4);
     _pageController.numberOfPages = _recipeImages.count ;
     
     int i = 10 ;
     for (id elemnt in _recipeImages) {
-        UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake(i,0,self.bounds.size.width-20, self.bounds.size.height-_pageController.frame.size.height)];
+        UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake(i,10,self.bounds.size.width-20, self.bounds.size.height-_pageController.frame.size.height)];
         img.backgroundColor = [UIColor greenColor];
         img.tag = [_recipeImages indexOfObject:elemnt];
         img.image = [UIImage imageNamed:elemnt];
+        
+        img.layer.shadowOffset = CGSizeMake(0, 0);
+        img.layer.shadowRadius = 1;
+        img.layer.cornerRadius = 10;
+        img.layer.shadowOpacity = 1;
+
         [_scView addSubview:img];
         i = i+self.bounds.size.width ;
     }
-     [_scView setContentSize:CGSizeMake(_recipeImages.count* self.bounds.size.width,self.bounds.size.height-_pageController.frame.size.height-10)];
+     [_scView setContentSize:CGSizeMake(_recipeImages.count* self.bounds.size.width,_pageController.frame.size.height)];
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
